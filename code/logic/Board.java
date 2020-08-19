@@ -395,7 +395,6 @@ public class Board
     }
     public void clearLines(int[] fullRows, int size) {
         for (int r = fullRows[size-1]; r >= 0; r--) {
-                System.out.println(r);
             for (int c = 0; c < 10; c++) {
                 int aboveRow = r-size;
                 if (aboveRow >= 0) {
