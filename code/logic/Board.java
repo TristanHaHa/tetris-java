@@ -18,14 +18,14 @@ public class Board
     private boolean holding, landing;
     private Block holdBlock, shadowBlock;
     private MyFrame mf;
-    
+
     // constructor initializes instance variables
     public Board(MyFrame mf) {
         this.mf = mf;
         timer = new javax.swing.Timer(10, new TimerListener());
         init();
     }
-    
+
     // helper method to the constructor that initializes instance variables
     // is a separate method so it can be called again when the player restarts the game
     private void init() {
@@ -52,9 +52,9 @@ public class Board
         }
         newBlock();
     }
-    
+
     // getter methods
-    
+
     public boolean[][] getLandedGrid() {
         return landedGrid;
     }
@@ -88,9 +88,9 @@ public class Board
     public Block getShadowBlock() {
         return shadowBlock;
     }
-    
+
     // setter methods
-    
+
     public void setlandedGrid(boolean[][] landedGrid) {
         this.landedGrid = landedGrid;
     }
@@ -124,9 +124,9 @@ public class Board
     public void setShadowBlock(Block shadowBlock) {
         this.shadowBlock = shadowBlock;
     }
-    
+
     // other getter methods
-    
+
     public Block getCurrentBlock() {
         return blocks.get(blocks.size()-1);
     }
@@ -137,7 +137,7 @@ public class Board
         return getCurrentBlock().getTopLeft();
     }
     // grid getter methods that return 2d color arrays in order to be displayed in MyFrame
-    
+
     public Color[][] getSideGrid() {
         Color[][] grid = new Color[12][4];
         for (int r = 0; r < grid.length; r++) {
@@ -190,9 +190,9 @@ public class Board
         }
         return grid;
     }
-    
+
     // simple movement methods
-    
+
     public void up() {
         this.getCurrentBlock().up();
     }
@@ -236,9 +236,9 @@ public class Board
     public void shadowSlam() {
         while (shadowCanMoveDown()) shadowBlock.down();
     }
-    
+
     // complex movement methods
-    
+
     public void hold() {
         holding = true;
         Block temp;
@@ -304,11 +304,11 @@ public class Board
                                 shouldRotate = false;
                                 getCurrentBlock().unRotate();
                             }
-                        }                                                                                                                               
+                        }
                     }
                 }
             }
-        } 
+        }
         if (shouldRotate) {
             getCurrentBlock().setLoc(temp);
             updateShadow();
@@ -330,7 +330,7 @@ public class Board
     }
 
     // update methods
-    
+
     public void update() {
         this.down();
     }
@@ -384,7 +384,6 @@ public class Board
             }
         }
         if (heightSet.size() > 0) clearLines(hashSetToArr(heightSet), heightSet.size());
-        else System.out.println("empty");
     }
     private int[] hashSetToArr(HashSet<Integer> set) {
         int[] arr = new int[set.size()];
@@ -413,7 +412,7 @@ public class Board
         if (size == 2) score += 300*(level+1);
         if (size == 3) score += 500*(level+1);
         if (size == 4) score += 800*(level+1);
-        
+
         linesCleared += size;
         if (linesCleared >= lineThreshold) {
             lineThreshold += 5;
@@ -438,7 +437,7 @@ public class Board
     }
 
     // checker methods
-    
+
     public boolean canMoveDown() {
         for (int i = 0; i < getCurrentLoc().length; i++) {
             int x = getCurrentLoc()[i].x;
