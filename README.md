@@ -2,7 +2,7 @@
 tetris-java is Java clone of the popular Tetris game
 
 ## Installation
-TO install tetris-java, clone this repository using the command line
+To install tetris-java, clone this repository using the command line
 
 ```bash
 git clone https://github.com/TristanHaHa/tetris-java.git
@@ -20,9 +20,7 @@ Controls:
 ![gif of gameplay](https://github.com/TristanHaHa/tetris-java/blob/master/gifs/tetris-gameplay.gif)
 
 ## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
+I am currently not accepting pull requests, as this is a finished project for me.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
