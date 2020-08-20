@@ -17,7 +17,7 @@ Controls:
 - esc to pause game
 
 ## Gameplay
-![gif of gameplay](https://github.com/TristanHaHa/tetris-java/blob/master/gifs/tetris-gameplay.gif =519x450)
+![gif of gameplay](https://github.com/TristanHaHa/tetris-java/blob/master/media/tetris-demo.gif)
 
 ## Contributing
 I am currently not accepting pull requests.
