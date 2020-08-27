@@ -22,5 +22,8 @@ Controls:
 ## Contributing
 I am currently not accepting pull requests.
 
+## Note
+This project was made by me in high school. At the time, I didn't use git or version control, so there aren't many commits. I uploaded this project just to display my code.
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
