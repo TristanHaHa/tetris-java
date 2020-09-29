@@ -8,6 +8,11 @@ To install tetris-java, clone this repository using the command line
 git clone https://github.com/TristanHaHa/tetris-java.git
 ```
 
+and run
+
+```bash
+java src/main/Main.java
+```
 ## Usage
 Controls:
 - left/right/down arrow keys for block movement
